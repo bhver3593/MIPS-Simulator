@@ -1,0 +1,39 @@
+# MIPS assembly file
+
+# r1 = 5
+# r2 = 10
+# r3 = 15
+# r4 = 20
+# r5 = 25
+# r6 = 30
+#
+# r10 = 33
+# r11 = 44
+
+# This assembly file is for building our project
+# We will create a better one using Compiler Explorer
+
+LW $r1, 4($sp)		# load value from sp + 4 into r1;
+LW $r2, 16($sp)		# load value from sp + 16 into r2;
+LW $r3, 32($sp)		# load value from sp + 32 into r3; 
+ADD $r10, $r1, $r2	# r10 = 5 + 10 = 15
+ADDI $r10, $r10, 13	# r10 = 15 + 13 = 28
+SUB $r10, $r10, $r2	# r10 = 28 - 10 = 18
+MUL $r10, $r1, $r2	# r10 = 5 * 10 = 50
+AND $r5, $r10, $r11	# r5 = bitwise comparison of 50 and 44
+OR $r6, $r10, $r11	# r5 = bitwise comparison of 50 and 44
+SLL $r5, $r5, 4		
+SRL $r6, $r6, 2
+SW $r1, 4($sp)
+SW $r10, 16($sp)
+SW $r11, 32($sp)
+ADDI $r10, $r11, 6
+BEQ $r2, $r3, 3
+J 24
+
+#End of file	
+
+
+
+
+

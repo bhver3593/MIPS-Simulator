@@ -1,0 +1,7 @@
+
+
+LW $r1, 16($sp)		# load value from sp + 4 into r1;
+LW $r2, 20($sp)		# load value from sp + 16 into r2;
+LW $r3, 24($sp)		# load value from sp + 32 into r3;
+
+#End of file
